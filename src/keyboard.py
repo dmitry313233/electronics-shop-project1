@@ -12,7 +12,12 @@ class MixinLog:
             return self
 
 
+
 class Keyboard(Item, MixinLog):
     def __init__(self, name, price, quantity):
         super().__init__(name, price, quantity)
         self.language = 'EN'
+
+    @property
+    def languages(self):
+        return self.language
