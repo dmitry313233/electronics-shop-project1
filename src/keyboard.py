@@ -11,6 +11,10 @@ class MixinLog:
             self.language = 'EN'
             return self
 
+    @property
+    def languages(self):
+        return self.__language
+
 
 
 class Keyboard(Item, MixinLog):
@@ -18,6 +22,3 @@ class Keyboard(Item, MixinLog):
         super().__init__(name, price, quantity)
         self.language = 'EN'
 
-    @property
-    def languages(self):
-        return self.language
